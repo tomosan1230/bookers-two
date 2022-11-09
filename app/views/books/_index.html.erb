@@ -23,10 +23,11 @@
           <% end %>
         </td>
         <td><%= book.body %></td>
+        <td>
+          <%= render 'favorites/favorite', book: book %>
+        </td>
       </tr>
     <% end %>
     </tbody>
   </table>
-
-
 </div>

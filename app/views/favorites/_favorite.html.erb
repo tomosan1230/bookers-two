@@ -1,0 +1,11 @@
+<% if book.favorited_by?(current_user) %>
+  <%= link_to book_favorites_path(book.id), method: :delete do %>
+    <span style="color:red;">❤︎</span>
+    <%= book.favorites.count %>
+  <% end %>
+<% else %>
+  <%= link_to book_favorites_path(book.id), method: :book do %>
+    <span>❤︎</span>
+    <%= book.favorites.count %>
+  <% end %>
+<% end %>

@@ -1,7 +1,8 @@
 <div class="container px-5 px-sm-0">
+  <%= render "layouts/errors", new_book: @new_book %>
   <div class="row">
 
-    <%= render "users/info", user: current_user, new_book: @new_book %>
+    <%= render "users/info", user: @book.user, new_book: @new_book %>
 
 
     <div class="col-md-8 offset-md-1">
@@ -21,6 +22,9 @@
             <% end %>
             </td>
           <td><%= @book.body %></td>
+          <td>
+          <%= render 'favorites/favorite', book: @book %>
+          </td>
 
           <% if @user == current_user %>
           <td>

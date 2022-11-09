@@ -1,7 +1,9 @@
 <div class="container px-5 px-sm-0">
-  <div class="row">
+  <%= render "layouts/errors", new_book: @new_book %>
 
+  <div class="row">
     <%= render "users/info", user: current_user, new_book: @new_book %>
     <%= render "index", books: @books %>
   </div>
+
 </div>
