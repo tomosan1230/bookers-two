@@ -22,8 +22,12 @@
             <% end %>
             </td>
           <td><%= @book.body %></td>
+
           <td>
           <%= render 'favorites/favorite', book: @book %>
+          </td>
+          <td>
+            <%= render 'book_comments/counts', books: @book %>
           </td>
 
           <% if @user == current_user %>
@@ -37,6 +41,9 @@
 
         </tr>
       </table>
+
+      <%= render 'book_comments/comments', books: @book, book_comment: @book_comment %>
+
     </div>
 
 

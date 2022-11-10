@@ -26,6 +26,9 @@
         <td>
           <%= render 'favorites/favorite', book: book %>
         </td>
+        <td>
+          <%= render 'book_comments/counts', books: book %>
+        </td>
       </tr>
     <% end %>
     </tbody>
